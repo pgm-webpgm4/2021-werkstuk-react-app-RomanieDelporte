@@ -1,0 +1,32 @@
+@import '../../_sass/2-vendor/bootstrap';
+@import '../../_sass/1-abstracts/index';
+
+.app-footer {
+ position: sticky;
+    
+ .nav-item  a {
+   color:  $color-white;
+   text-transform: capitalize;
+
+  }
+
+ h2 {
+   color: $color-white;
+ }
+  p {
+    color: $color-white;
+
+  }
+  
+}
+
+.copyright {
+  
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 0;
+p{
+   color: $color-black; 
+  }
+  
+}
