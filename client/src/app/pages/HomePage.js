@@ -10,10 +10,8 @@ const HomePage = ({children}) => {
   return (
     <div className="home">
       <img className="home__image"src={homepage} alt=""/>
-      <div className="container">
 
      <div>Home</div>
-     </div>
      </div>
 
   );
