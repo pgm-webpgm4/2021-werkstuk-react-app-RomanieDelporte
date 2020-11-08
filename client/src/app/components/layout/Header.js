@@ -19,9 +19,9 @@ const Header = ({children}) => {
           </div>
           <div className="col-6">
           <ul className="header__nav">
-            <li className="nav_item">
+            {/* <li className="nav_item">
               <NavLink to={Routes.HOME} className="nav-link" activeClassName="active">Home</NavLink>
-            </li> 
+            </li>  */}
             <li className="nav_item">
               <NavLink to={Routes.SHAMPOO} className="nav-link" activeClassName="active">Shampoo</NavLink>
             </li> 
@@ -34,6 +34,9 @@ const Header = ({children}) => {
             <li className="nav_item">
               <NavLink to={Routes.CONTACT} className="nav-link" activeClassName="active">Contact</NavLink>
             </li> 
+            <button className="nav_item">
+              <NavLink to={Routes.REGISTER} className="nav-link" activeClassName="active">Registreer</NavLink>
+            </button> 
           </ul>
           </div>
         </div>

@@ -8,4 +8,5 @@ export const MASKS_DETAIL = '/masks/:id';
 export const CONDITIONER = '/conditioner';
 export const MASKS = '/masks';
 export const CONTACT = '/contact';
+export const REGISTER = '/register';
 

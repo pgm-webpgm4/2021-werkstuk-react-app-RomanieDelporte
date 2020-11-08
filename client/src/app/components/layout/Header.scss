@@ -19,8 +19,15 @@ body {
     text-transform: uppercase;
     font-size: 1.5rem;
     color: $color-pink;
+    text-decoration:none;
 
   }
+
+  &__link:hover {
+    color: $color-pink;
+    text-decoration:none;
+  }
+
 
   &__nav {
     display: flex;
@@ -36,6 +43,17 @@ body {
 
   .nav-link:hover {
     color: $color-pink;
+  }
+
+  button {
+    border: 2px solid $color-grey;
+    background-color: $color-white;
+    border-radius: 2px;
+  }
+
+  button:hover {
+    color: $color-white;
+    background-color: $color-pink;
   }
 
   
