@@ -21,11 +21,11 @@ const httpLink = new HttpLink({
 
 const authLink  = new ApolloLink((operation, forward) => {
   // grab the token form localstorage
-    const token  = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZmE2YjY1MWE0ZTgzNTNhZTc3ODM0NDIiLCJlbWFpbCI6InJvbWFuaWVkZWxwQHN0dWRlbnQuYXJ0ZXZlbGRlaHMuYmUiLCJpYXQiOjE2MDQ4NTY5OTIsImV4cCI6MTYwNDg2MDU5Mn0.j8AHKMAtCOsxaVf4v-M0gwAf7h-tIr0K-Qo4Wo-ihgw";
+    const token  = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZmE2YjY1MWE0ZTgzNTNhZTc3ODM0NDIiLCJlbWFpbCI6InJvbWFuaWVkZWxwQHN0dWRlbnQuYXJ0ZXZlbGRlaHMuYmUiLCJpYXQiOjE2MDQ5MTMxMzUsImV4cCI6MTYwNDkxNjczNX0.km78ykw7WFNJaYVMCEBbSaksobi_xGf_DmD0JH7hiw4";
 
     operation.setContext({
       headers: {
-        authorization: token ? `Bearer${token} `: ''     
+        authorization: token ? `Bearer ${token} `: ''     
       }
     });
 
@@ -35,7 +35,7 @@ const authLink  = new ApolloLink((operation, forward) => {
 // init apolloclient
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
-  uri: 'http://localhost:4000',
+  // uri: 'http://localhost:4000',
   cache: new InMemoryCache(),
 });
 
