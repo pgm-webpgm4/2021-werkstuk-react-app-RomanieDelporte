@@ -49,10 +49,10 @@ const GetCategory =() => {
       <div className="App">
       {!loading && (
           <ul>
-            {data.products.map(categorie => (
-              <li key={categorie.id}>
-                <h2>{categorie.title}</h2>
-                {console.log(categorie)}
+            {data.products.map(product => (
+              <li key={product.id}>
+                <h2>{product.title}</h2>
+                {console.log(product)}
               </li>
             ))}
           </ul>

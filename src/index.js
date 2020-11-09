@@ -16,7 +16,7 @@ const httpLink = new HttpLink({
   uri:
     process.env.NODE_ENV === 'development'
       ? 'http://localhost:5000'
-      : 'https://memoryapi.incloudspace.be/',
+      : 'https://graphql-webshop.herokuapp.com/',
 });
 
 const authLink  = new ApolloLink((operation, forward) => {
