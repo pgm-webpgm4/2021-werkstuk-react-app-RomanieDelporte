@@ -7,13 +7,9 @@ import {useError} from '../../admin/Hooks';
 const CATEGORIES = gql`
 
     {
-  categories {
+  products {
     id
     title
-    products {
-      title
-      id
-    }
   }
 }
 `;
@@ -53,7 +49,7 @@ const GetCategory =() => {
       <div className="App">
       {!loading && (
           <ul>
-            {data.categories.map(categorie => (
+            {data.products.map(categorie => (
               <li key={categorie.id}>
                 <h2>{categorie.title}</h2>
                 {console.log(categorie)}
