@@ -23,7 +23,7 @@ const Header = ({children}) => {
               <NavLink to={Routes.HOME} className="nav-link" activeClassName="active">Home</NavLink>
             </li>  */}
             <li className="nav_item">
-              <NavLink to={Routes.SHAMPOO} className="nav-link" activeClassName="active">Shampoo</NavLink>
+              <NavLink to={Routes.PRODUCTS} className="nav-link" activeClassName="active">Products</NavLink>
             </li> 
             <li className="nav_item">
               <NavLink to={Routes.CONDITIONER} className="nav-link" activeClassName="active">Conditioner</NavLink>

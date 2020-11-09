@@ -1,8 +1,8 @@
 // hier worden de routes gecreërd voor het aanspreken in app.js
 export const LANDING = '/';
 export const HOME = '/home';
-export const SHAMPOO = '/shampoo';
-export const SHAMPOO_DETAIL = '/shampoo/:id';
+export const PRODUCTS = '/products';
+export const PRODUCTS_DETAIL = '/products/:id';
 export const CONDITIONER_DETAIL = '/conditioner/:id';
 export const MASKS_DETAIL = '/masks/:id';
 export const CONDITIONER = '/conditioner';

@@ -1,41 +1,33 @@
 import React from 'react';
 import { useQuery, gql, NetworkStatus } from '@apollo/client';
+import { Link } from 'react-router-dom';
 
-import {useError} from '../../admin/Hooks';
+import * as Routes from '../../routes';
 
+import './ShampooList.scss';
 
+// ophalen van data
 const CATEGORIES = gql`
 
     {
   products {
     id
     title
+    quantity
+    price
+    image
   }
 }
 `;
 const GetCategory =() => {
-    const { handleGqlError } = useError;
 
     // die usequery wordt opgevraagd elke keer onze component wordt gerenderd
     // loading  je krijgt een status wanneer er data wordt geladen
     // error  wanneer er zich iets fout voordoet
     //  data wanneer je de data effectief hebt dus er is iets succesvol gebeurd
     //  refetch je kan de data opnieuw ophalen die in de usequery zit
-    const { loading, error, data, networkStatus } = useQuery(CATEGORIES, {
-    onError: handleGqlError,
-    fetchPolicy: "cache-first", // https://www.apollographql.com/docs/react/data/queries/#supported-fetch-policies
-    notifyOnNetworkStatusChange: true,
-    // pollInterval: 500,
-  });
+    const { loading, error, data, networkStatus } = useQuery(CATEGORIES, {});
 
-    // wil je data ophalen door op een button te clicken dan gebruik je uselazyquery
-    // const [getUser, lazyQueryParams] = useLazyQuery(GET_USER);
-
-  // useEffect(() => {
-  //   if(lazyQueryParams.data && lazyQueryParams.data.user) {
-  //     console.log(lazyQueryParams.data.user.password);
-  //   }
-  // }, [lazyQueryParams.data])
 
 
   if (networkStatus === NetworkStatus.refetch) return 'Refetching!';
@@ -46,18 +38,22 @@ const GetCategory =() => {
 
    return (
     <>
-      <div className="App">
       {!loading && (
-          <ul>
+        <div className="row">
             {data.products.map(product => (
-              <li key={product.id}>
-                <h2>{product.title}</h2>
-                {console.log(product)}
-              </li>
-            ))}
-          </ul>
+              <div className="card__products col-4 col-md-4">
+             <div className="card" key={product.id}>
+               <img src={product.image} className="card-img-top" alt=""/>
+              <div className="card-body">
+                 <h5 className="card-title">{product.title}</h5>
+                 <p className="card-text">{product.price}</p> <p className="card__quantity">{product.quantity}</p>
+                  <Link to={Routes.PRODUCTS_DETAIL.replace(':id', product.id)} className="btn-detail">Bekijk meer</Link>
+
+               </div>
+             </div>
+              </div>
+            ))}</div>
         )}
-      </div>
     </>
   ); 
 }   

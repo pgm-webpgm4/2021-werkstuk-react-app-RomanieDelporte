@@ -1,7 +1,7 @@
 import ConditionerPage from './ConditionerPage';
 import ConditionerDetailPage from './CondtionerDetailPage';
-import ShampooPage from './ShampooPage';
-import ShampooDetailPage from './ShampooDetailPage';
+import ProductsPage from './ProductsPage';
+import ProductsDetailPage from './ProductsDetailpage';
 import MasksPage from './MasksPage';
 import MasksDetailPage from './MasksDetailPage'
 import HomePage from './HomePage';
@@ -13,8 +13,8 @@ import AdminPage from './AdminPage';
 export {
     ConditionerDetailPage,
     ConditionerPage,
-    ShampooDetailPage,
-    ShampooPage, 
+    ProductsDetailPage,
+    ProductsPage, 
     MasksDetailPage,
     MasksPage,
     HomePage,

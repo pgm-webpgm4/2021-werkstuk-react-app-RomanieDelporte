@@ -1,0 +1,18 @@
+@import '../../_sass/2-vendor/bootstrap';
+@import '../../_sass/1-abstracts/colors';
+
+
+
+.btn-detail  {
+    margin-bottom: 4%;
+    background-color: $color-pink; 
+    width: 40%;
+    border: 2px solid $color-pink;
+    padding: 1%;
+    color: $color-white;
+}
+
+.card__products {
+    margin-bottom: 2%;
+    margin-top: 5%;
+}
