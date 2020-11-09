@@ -1,5 +1,5 @@
-import React, { useEffect} from 'react';
-import { useQuery, useLazyQuery, gql, NetworkStatus } from '@apollo/client';
+import React from 'react';
+import { useQuery, gql, NetworkStatus } from '@apollo/client';
 
 import {useError} from '../../admin/Hooks';
 
@@ -21,7 +21,7 @@ const GetCategory =() => {
     // error  wanneer er zich iets fout voordoet
     //  data wanneer je de data effectief hebt dus er is iets succesvol gebeurd
     //  refetch je kan de data opnieuw ophalen die in de usequery zit
-    const { loading, error, data, refetch, networkStatus } = useQuery(CATEGORIES, {
+    const { loading, error, data, networkStatus } = useQuery(CATEGORIES, {
     onError: handleGqlError,
     fetchPolicy: "cache-first", // https://www.apollographql.com/docs/react/data/queries/#supported-fetch-policies
     notifyOnNetworkStatusChange: true,
