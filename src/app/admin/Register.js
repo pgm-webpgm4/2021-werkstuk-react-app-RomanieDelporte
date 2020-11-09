@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { gql, useMutation } from '@apollo/client';
 
+
+import './register.scss'
 const REGISTER = gql`
   mutation register($email: String!, $password: String!) {
     register(user: { email: $email, password: $password }) {
@@ -26,17 +28,20 @@ const Register =()  =>{
           register({ variables: { email: email, password: password } });
         }}
       >
-        <div className="form-control">
+        <div className="form">        
           <span>E-mail</span>
+
+        <div className="form__inputs">
           <input
             onChange={e => setEmail(e.target.value)} />
-        </div>
-        <div className="form-control">
-          <span>Password</span>
+        </div>         
+         <span>Password</span>
+        <div className="form__input">
           <input
             onChange={e => setPassword(e.target.value)} />
         </div>
-        <button type="submit">Register</button>
+        </div>
+        <button className="button_registers" type="submit">Registreer</button>
       </form>
     </div>
   )

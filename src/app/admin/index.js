@@ -33,7 +33,7 @@ function Admin() {
     // error  wanneer er zich iets fout voordoet
     //  data wanneer je de data effectief hebt dus er is iets succesvol gebeurd
     //  refetch je kan de data opnieuw ophalen die in de usequery zit
-    const { loading, error, data, refetch, networkStatus } = useQuery(USERS, {
+    const { loading, error, networkStatus } = useQuery(USERS, {
     onError: handleGqlError,
     fetchPolicy: "cache-first", // https://www.apollographql.com/docs/react/data/queries/#supported-fetch-policies
     notifyOnNetworkStatusChange: true,
@@ -41,7 +41,7 @@ function Admin() {
   });
 
     // wil je data ophalen door op een button te clicken dan gebruik je uselazyquery
-    const [getUser, lazyQueryParams] = useLazyQuery(GET_USER);
+    const [ lazyQueryParams] = useLazyQuery(GET_USER);
 
   useEffect(() => {
     if(lazyQueryParams.data && lazyQueryParams.data.user) {
@@ -58,18 +58,6 @@ function Admin() {
 
    return (
     <>
-      <div className="App">
-      {!loading && (
-          <ul>
-            {data.users.map(user => (
-              <li key={user.id}>
-                User with email: {user.email}. <button onClick={() => getUser({ variables: { id: user.id } })}>Get Password</button>
-              </li>
-            ))}
-          </ul>
-        )}
-        <button onClick={() => refetch()}>Refetch</button>
-      </div>
       <Register></Register>
     </>
   ); 

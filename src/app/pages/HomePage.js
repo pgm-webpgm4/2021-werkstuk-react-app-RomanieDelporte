@@ -8,11 +8,12 @@ import homepage from '../assets/images/homepage.jpeg';
 // homepage
 const HomePage = ({children}) => {
   return (
-    <div className="home">
+    <div className="container">
+       <div className="home">
       <img className="home__image"src={homepage} alt=""/>
-
-     <div>Home</div>
      </div>
+    </div>
+   
 
   );
 };

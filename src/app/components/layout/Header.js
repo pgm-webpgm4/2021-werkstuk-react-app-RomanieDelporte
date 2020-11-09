@@ -34,7 +34,7 @@ const Header = ({children}) => {
             <li className="nav_item">
               <NavLink to={Routes.CONTACT} className="nav-link" activeClassName="active">Contact</NavLink>
             </li> 
-            <button className="nav_item">
+            <button className="nav_register">
               <NavLink to={Routes.REGISTER} className="nav-link" activeClassName="active">Registreer</NavLink>
             </button> 
           </ul>

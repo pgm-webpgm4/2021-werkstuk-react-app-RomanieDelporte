@@ -4,8 +4,10 @@ import Admin from '../admin';
 const AdminPage = ({children}) => {
   return (
       <div> 
-          <div>Admin</div>
+        <div className="container">
+          <div>Registreer</div>
           <Admin/>
+          </div>
       </div>
    
 
