@@ -1,4 +1,4 @@
-import GetCategory from './ShampooList';
+import GetCategory from './ProductPage';
 import ProductDetailPage from './ProductsDetailPage';
 export {
     GetCategory,
