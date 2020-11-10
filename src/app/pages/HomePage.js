@@ -1,5 +1,5 @@
 import React, { } from 'react';
-import { Link, NavLink  } from 'react-router-dom';
+import { NavLink  } from 'react-router-dom';
 import * as Routes from '../routes';
 import './Homepage.scss';
 
@@ -24,7 +24,7 @@ const HomePage = ({children}) => {
          </div>
          <div className="col-4">
          <div className="home__image">
-             <img src={homepage}/>
+             <img src={homepage} alt=""/>
          </div> 
                 
 
