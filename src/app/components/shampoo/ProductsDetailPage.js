@@ -33,10 +33,23 @@ if (error) return `Error! ${error.message}`;
 
      return (
         <>
-        <div className="detail col-6">
-        <h1>{data.product.title}</h1>
-        <img src={data.product.image} alt=""/>
-        </div>
+       <div className="detail">
+           <div className="container">
+               <div className="row">
+                   <div className="detail__picture col-6">
+                       <img src={data.product.image} alt=""></img>
+                   </div>
+                   <div className="detail__title col-6">
+                        <h1>{data.product.title}</h1>
+                        <div className="detail__content">
+                        <p>{data.product.description}</p>
+                        <p>{data.product.price}</p>
+                        <button type="submit">Add to cart</button>
+                        </div>
+                   </div>
+               </div>
+           </div>
+       </div>
         </>
      )
 }

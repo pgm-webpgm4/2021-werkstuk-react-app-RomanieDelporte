@@ -5,7 +5,10 @@
 const ProductsDetailPage = ({children}) => {
   return (
       <div>
-        <ProductDetailPage/>
+        <div className="col-12">
+        <ProductDetailPage/>  
+        </div>
+        
       </div>
   )
 };

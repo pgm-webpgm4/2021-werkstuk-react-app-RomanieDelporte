@@ -1,10 +1,59 @@
+@import '../_sass/1-abstracts/colors';
+@import '../_sass/2-vendor/bootstrap';
 .home {
-    margin-top: 3%;
-    &__image {
-        width: 40%;
-        max-height: 12000px;
-        border-radius: 3px;
-        display: flex;
-        justify-content: center;
+    margin-top: 4%;
+
+
+    &__image img {
+        width: 160%;
+        height: auto;
+        border: 5px solid $color-grey;
+        border-radius: 5px;
     }
+
+    &__image img:hover {
+        border:  5px solid $color-pink;
+        margin: -9px;
+    }
+
+
+    &__content {
+        margin-top: 5%;
+
+        h2 {
+         font-size: 50px;   
+        }
+        
+     
+    }
+
+    &__content h2:nth-child(1) {
+        color: $color-pink;
+    }
+        
+    &__content h2:nth-child(2) {
+        font-size: 40px;
+        font-weight: bold;
+    }
+    &__content h2:nth-child(3) {
+        color: $color-pink;
+        }
+
+
+        &__routes {
+            margin-top: 5%;
+        }
+
+
+        .nav-products {
+            color: $color-grey;
+            text-decoration: underline;
+            font-weight: lighter;
+            font-size: 25px;
+        }
+
+        .nav-products:hover {
+            color: $color-pink;
+        }
+
 }
