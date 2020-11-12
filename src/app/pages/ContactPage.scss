@@ -1,0 +1,51 @@
+@import '../_sass/1-abstracts/colors';
+@import '../_sass/2-vendor/bootstrap';
+
+body {
+    box-sizing: border-box;
+}
+
+.contact {
+    display: flex;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    &__page img {
+        width: 70%;
+    }
+
+
+   &__form {
+     margin-top: 3%;
+       display: block;
+
+       input {
+           display: block;
+           width: 70%;
+           margin-bottom: 3%;
+           font-size: 20px;
+       }
+
+       label {
+           color: $color-pink;
+       }
+
+       textarea{
+        display: block;
+        width: 70%;
+        height: 100px;
+       }
+
+       button {
+           background-color: $color-pink;
+           color: $color-white;
+           width: 15%;
+           border: 2px solid $color-pink;
+           padding: 1%;
+           margin-top: 4%;
+
+       }
+
+       
+   }
+}
+

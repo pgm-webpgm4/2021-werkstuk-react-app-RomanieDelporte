@@ -8,14 +8,22 @@
     background-color: $color-pink; 
     width: 40%;
     border: 2px solid $color-pink;
-    padding: 1%;
+    padding: 1.4%;
     color: $color-white;
+}
+
+.btn-detail:hover {
+    color: $color-grey;
+    background-color: $color-white;
+    border: 2px solid $color-grey;
+    text-decoration: none;
 }
 
 .card__products {
     margin-bottom: 2%;
     margin-top: 5%;
 }
+
 
 
 

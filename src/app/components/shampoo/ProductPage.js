@@ -48,7 +48,6 @@ const GetCategory =() => {
                  <h5 className="card-title">{product.title}</h5>
                  <p className="card-text">{product.price}</p> <p className="card__quantity">{product.quantity}</p>
                   <Link to={Routes.PRODUCTS_DETAIL.replace(':id', product.id)} className="btn-detail">Bekijk meer</Link>
-
                </div>
              </div>
               </div>

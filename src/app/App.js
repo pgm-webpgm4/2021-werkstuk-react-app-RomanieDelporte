@@ -3,7 +3,7 @@ import { RouteWithLayout } from './utilities';
 import { BaseLayout } from './layouts';
 
 import { BrowserRouter as Router, Redirect, Switch } from 'react-router-dom';
-import {ProductsPage, ProductsDetailPage, MasksPage, MasksDetailPage, ConditionerPage, ConditionerDetailPage, HomePage, ContactPage, AdminPage} from './pages'
+import {ProductsPage, ProductsDetailPage, MasksPage, MasksDetailPage, ConditionerPage, ConditionerDetailPage, HomePage, ContactPage, AdminPage, LoginPage} from './pages'
 import './App.scss';
 import * as Routes from './routes';
 
@@ -23,6 +23,7 @@ function App() {
                 <RouteWithLayout exact path={Routes.MASKS_DETAIL} layout={ BaseLayout } component={ MasksDetailPage }/>
                 <RouteWithLayout exact path={Routes.CONTACT} layout={ BaseLayout } component={ ContactPage }/>
                 <RouteWithLayout exact path={Routes.REGISTER} layout={ BaseLayout } component={ AdminPage }/>
+                <RouteWithLayout exact path={Routes.LOGIN} layout={ BaseLayout } component={ LoginPage }/>
               </Switch>
             </Router>
     </div>

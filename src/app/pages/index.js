@@ -7,7 +7,7 @@ import MasksDetailPage from './MasksDetailPage'
 import HomePage from './HomePage';
 import ContactPage from './ContactPage';
 import AdminPage from './AdminPage';
-
+import LoginPage from './LoginPage';
 
 
 export {
@@ -20,5 +20,6 @@ export {
     HomePage,
     ContactPage,
     AdminPage,
+    LoginPage,
     
 }

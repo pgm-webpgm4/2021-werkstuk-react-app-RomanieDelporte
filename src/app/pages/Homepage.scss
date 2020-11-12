@@ -2,19 +2,26 @@
 @import '../_sass/2-vendor/bootstrap';
 .home {
     margin-top: 4%;
+    margin-bottom: -5%;
 
-
+     &__image {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 35px;
+        grid-row-gap: 13px;
+     }
     &__image img {
-        width: 160%;
-        height: auto;
+        width:260px;
+        height: 250px;
         border: 5px solid $color-grey;
         border-radius: 5px;
     }
 
-    &__image img:hover {
-        border:  5px solid $color-pink;
-        margin: -9px;
+    &__image img:nth-child(2) {
+         margin-top: 32%;
     }
+
 
 
     &__content {

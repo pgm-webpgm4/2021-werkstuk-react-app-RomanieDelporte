@@ -5,6 +5,7 @@ import './Homepage.scss';
 
 
 
+import homeproductpage from '../assets/images/homeproductpage.png';
 import homepage from '../assets/images/homepage.jpeg';
 // homepage
 const HomePage = ({children}) => {
@@ -24,6 +25,7 @@ const HomePage = ({children}) => {
          </div>
          <div className="col-4">
          <div className="home__image">
+             <img src={homeproductpage} alt=""/>
              <img src={homepage} alt=""/>
          </div> 
                 
