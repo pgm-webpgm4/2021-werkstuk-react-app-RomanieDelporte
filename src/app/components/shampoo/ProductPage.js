@@ -19,6 +19,12 @@ const CATEGORIES = gql`
   }
 }
 `;
+
+
+localStorage.setItem('CATEGORIES', JSON.stringify(CATEGORIES));
+const localItem = localStorage.getItem('CATEGORIES');
+console.log('localItem: ', JSON.parse(localItem));
+
 const GetCategory =() => {
 
     // die usequery wordt opgevraagd elke keer onze component wordt gerenderd
@@ -41,7 +47,7 @@ const GetCategory =() => {
       {!loading && (
         <div className="row">
             {data.products.map(product => (
-              <div className="card__products col-4 col-md-4">
+              <div className="card__products col-4 col-md-4" key={product.id}>
              <div className="card" key={product.id}>
                <img src={product.image} className="card-img-top" alt=""/>
               <div className="card-body">
