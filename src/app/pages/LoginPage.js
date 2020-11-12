@@ -1,5 +1,5 @@
 import React, { } from 'react';
-import LoginAdmin from '../admin';
+// import LoginAdmin from '../admin';
 
 const LoginPage = ({children}) => {
   return (
