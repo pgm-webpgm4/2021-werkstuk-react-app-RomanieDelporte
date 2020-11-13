@@ -30,7 +30,7 @@ const Login =()  =>{
         // setRedirect(!redirect);
         if(data.login.isAdmin) {
 
-        console.log("Ys you are the admin of this website");
+        console.log("Yes you are the admin of this website");
 
         } else {
         console.log("You are not allowed to do this");
