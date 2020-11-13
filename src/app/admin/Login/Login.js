@@ -58,13 +58,13 @@ const Login =()  =>{
 
         <div className="form__inputs">
           <input
-            onChange={e => setEmail(e.target.value)} />
+             type="email" onChange={e => setEmail(e.target.value)} />
         </div>         
          <span>Password</span>
         <div className="form__input">
           <input
-            onChange={e => setPassword(e.target.value)} />
-        </div>
+            type="password" onChange={e => setPassword(e.target.value)} />
+        </div> 
         </div>
         <button className="button__login" type="submit">Login</button>
       </form>
