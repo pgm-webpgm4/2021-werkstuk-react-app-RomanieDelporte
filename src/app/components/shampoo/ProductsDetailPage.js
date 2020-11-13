@@ -25,23 +25,6 @@ const ProductDetailPage = ({Children}) => {
     `;
 
 
-
-
-// localStorage.setItem('GET_DETAIL', JSON.stringify(GET_DETAIL));
-// const localItem = localStorage.getItem('GET_DETAIL');
-// console.log('localItem: ', JSON.parse(localItem));
-
-
-// shoppingcart.innerHTML = Product.map((product, i) => {
-//     return `
-    
-    
-    
-//     `;
-
-
-// })
-
 const { loading, error, data } = useQuery(GET_DETAIL, {
     variables: { id },
 });

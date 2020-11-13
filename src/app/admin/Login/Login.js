@@ -5,7 +5,7 @@ import { gql, useLazyQuery } from '@apollo/client';
 // import {  NavLink  } from 'react-router-dom';
 
 
-import * as Routes from '../../routes';
+// import * as Routes from '../../routes';
 
 import '../register.scss'
 const LOGIN = gql`
@@ -22,25 +22,29 @@ const Login =()  =>{
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [login, { data }] = useLazyQuery(LOGIN);
-  const [redirect, setRedirect] = useState(false);
+  // const [redirect, setRedirect] = useState(false);
 
   useEffect(() => {
     if(data) { console.log(data);    
-        console.log(data.login.isAdmin);
-        setRedirect(!redirect);
+      console.log(data.login.isAdmin);
+        // setRedirect(!redirect);
         if(data.login.isAdmin) {
-            console.log("Yes you are the admin of this website");
-        }    else {
+
+        console.log("Yes you are the admin of this website");
+
+        } else {
         console.log("You are not allowed to do this");
     }
     
     }
-  }, [data, redirect]);
+  }, [data]);
 
-   
-
-   
-
+  // if(redirect) {
+  //   return <Redirect to={Routes.HOME}/>
+  // } else {
+  //   console.log('not correct');
+  // }
+    
   return (
     <div>
       <form

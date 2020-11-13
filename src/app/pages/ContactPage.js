@@ -18,12 +18,12 @@ const ContactPage = ({children}) => {
                 </div>
             </div>
             <div className="contact__form col-6">
-              <form onSubmit={this.handleFormSubmit} id="my-form" action="mailto:romaniedelporte230@gmail.com" method="post" enctype="text/plain">
-                <label for="fname">Firstname</label> 
-                <input  value={this.state.firstname} type="text" id="fname" name="firstname" placeholder="Firstname" onChange={this.handleChange}></input> 
-                <label for="fname">Lastname</label> 
-               <input  value={this.state.lastname} type="text" id="fname" name="lastname" placeholder="Lastname" onChange={this.handleChange}></input> 
-                <label for="message">Message</label>
+              <form  id="my-form" action="mailto:romaniedelporte230@gmail.com" method="post" encType="text/plain">
+                <label htmlFor="fname">Firstname</label> 
+                <input   type="text" id="fname" name="firstname" placeholder="Firstname" ></input> 
+                <label htmlFor="fname">Lastname</label> 
+                <input   type="text" id="fname" name="lastname" placeholder="Lastname" ></input> 
+                <label htmlFor="message">Message</label>
                 <textarea id="message" name="message" placeholder="Write something.."></textarea>
                 <button type="submit">Send</button>
               </form>
