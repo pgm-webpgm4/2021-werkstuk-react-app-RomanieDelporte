@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { gql, useLazyQuery } from '@apollo/client';
-// import {Redirect} from "react-router-dom";
+// import { Redirect } from "react-router-dom";
 
 // import {  NavLink  } from 'react-router-dom';
 
@@ -18,41 +18,47 @@ const LOGIN = gql`
   }
 `;
 
+
+
 const Login =()  =>{
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [login, { data }] = useLazyQuery(LOGIN);
   // const [redirect, setRedirect] = useState(false);
 
-  useEffect(() => {
-    if(data) { console.log(data);    
-      console.log(data.login.isAdmin);
-        // setRedirect(!redirect);
-        if(data.login.isAdmin) {
+  // useEffect(() => {
+  //   if(data) { console.log(data);    
+  //     console.log(data.login.isAdmin);
+  //     if(data.login.isAdmin) {
+  //         // return <Redirect to={Routes.HOME}/>;
+  //         console.log("Yes you are the admin");
 
-        console.log("Ys you are the admin of this website");
-
-        } else {
-        console.log("You are not allowed to do this");
-    }
+  //       } else {
+  //       console.log("You are not allowed to do this");
+  //   }
     
+  //   }
+  // }, [data]);
+
+  useEffect(() => {  
+    if(!!data) {
+      console.log(data);     
+      window.localStorage.setItem('userId', data.login.userId);
+      window.localStorage.setItem('token', data.login.token);
+      window.localStorage.setItem('isAdmin', data.login.isAdmin);
     }
   }, [data]);
 
-  // if(redirect) {
-  //   return <Redirect to={Routes.HOME}/>
-  // } else {
-  //   console.log('not correct');
-  // }
-    
+
+ 
   return (
     <div>
-      <form
+      <form 
         onSubmit={e => {
           e.preventDefault();
           login({ variables: { email: email, password: password  } });
         }}
-      >
+      > 
         <div className="form">        
           <span>E-mail</span>
 
