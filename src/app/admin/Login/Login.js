@@ -42,12 +42,28 @@ const Login =()  =>{
 
   useEffect(() => {  
     if(!!data) {
-      console.log(data);     
-      window.localStorage.setItem('userId', data.login.userId);
-      window.localStorage.setItem('token', data.login.token);
-      window.localStorage.setItem('isAdmin', data.login.isAdmin);
+
+      // if(data.login.isAdmin) {
+      //   console.log("yes you are the admin")
+      // } else {
+      //   console.log("You are not allowed")
+      // }
+      // console.log(data);     
+
+      const login = {
+        "userId": data.login.userId,
+        "token": data.login.token,
+        "isAdmin": data.login.isAdmin,
+      }
+      let logindata  = JSON.parse(localStorage.getItem('Login'))|| [];
+      console.log(logindata);
+      logindata.push(login);
+      localStorage.setItem('Login', JSON.stringify(logindata)); 
+      
     }
+   
   }, [data]);
+
 
 
   
