@@ -4,12 +4,7 @@ import React from 'react';
 import './shoppingcart.scss';
 const ShoppingCartPage = ({Children}) => {
 
-    
-
-    
-
-     
-         const data = JSON.parse(localStorage.getItem('productInfo') || []);
+    const data = JSON.parse(localStorage.getItem('productInfo')) || [];
          console.log(data);
     
 
