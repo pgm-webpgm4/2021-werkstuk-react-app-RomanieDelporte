@@ -1,0 +1,19 @@
+@import '../../_sass/1-abstracts/colors';
+.shopping {
+    border-bottom: 2px solid grey;
+    padding-top: 2%;
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2%;
+
+        button {
+            background-color: $color-red;
+            padding: 1%;
+            border: 2px solid $color-red;
+            color: white;
+            width: 12%;
+
+        }
+    }
+}

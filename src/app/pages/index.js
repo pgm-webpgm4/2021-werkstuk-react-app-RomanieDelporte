@@ -8,6 +8,8 @@ import HomePage from './HomePage';
 import ContactPage from './ContactPage';
 import AdminPage from './AdminPage';
 import LoginPage from './LoginPage';
+import CartPage from './CartPage';
+
 
 
 export {
@@ -21,5 +23,6 @@ export {
     ContactPage,
     AdminPage,
     LoginPage,
+    CartPage,
     
 }

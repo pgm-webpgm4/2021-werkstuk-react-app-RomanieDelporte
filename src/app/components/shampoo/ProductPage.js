@@ -21,9 +21,9 @@ const CATEGORIES = gql`
 `;
 
 
-localStorage.setItem('CATEGORIES', JSON.stringify(CATEGORIES));
-const localItem = localStorage.getItem('CATEGORIES');
-console.log('localItem: ', JSON.parse(localItem));
+// localStorage.setItem('CATEGORIES', JSON.stringify(CATEGORIES));
+// const localItem = localStorage.getItem('CATEGORIES');
+// console.log('localItem: ', JSON.parse(localItem));
 
 const GetCategory =() => {
 

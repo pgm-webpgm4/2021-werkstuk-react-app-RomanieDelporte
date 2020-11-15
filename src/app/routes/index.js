@@ -10,4 +10,5 @@ export const MASKS = '/masks';
 export const CONTACT = '/contact';
 export const REGISTER = '/register';
 export const LOGIN = '/login';
+export const CART = '/cart';
 

@@ -28,12 +28,16 @@ const Header = ({children}) => {
             <li className="nav_item">
               <NavLink to={Routes.CONTACT} className="nav-link" activeClassName="active">Contact</NavLink>
             </li> 
+             <li className="nav_item">
+              <NavLink to={Routes.CART} className="nav-link" activeClassName="active">Cart</NavLink>
+            </li>
             <button className="nav_register">
               <NavLink to={Routes.REGISTER} className="nav-link" activeClassName="active">Registreer</NavLink>
             </button> 
             <button className="nav_login">
               <NavLink to={Routes.LOGIN} className="nav-link" activeClassName="active">Login</NavLink>
             </button>
+           
           </ul>
           </div>
         </div>
