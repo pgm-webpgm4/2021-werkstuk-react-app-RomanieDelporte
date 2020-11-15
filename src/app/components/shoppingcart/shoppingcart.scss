@@ -6,14 +6,37 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 2%;
+        font-weight: bold;
 
-        button {
+        
+
+        
+    }
+    
+   
+
+   
+} 
+
+.removed {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3%;
+   button {
             background-color: $color-red;
             padding: 1%;
             border: 2px solid $color-red;
             color: white;
             width: 12%;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+          
 
         }
-    }
+        button:hover {
+            background-color: $color-white;
+            color: $color-black;
+            border: 2Px solid $color-grey;
+        } 
 }

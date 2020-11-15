@@ -1,12 +1,25 @@
 import React from 'react';
 
 
+
+
+
 import './shoppingcart.scss';
 const ShoppingCartPage = ({Children}) => {
 
     const data = JSON.parse(localStorage.getItem('productInfo')) || [];
          console.log(data);
     
+         function deleteItem() {
+            localStorage.removeItem("productInfo");
+            setTimeout(function(){
+                window.location.reload();
+            }, );
+          }
+
+          console.log(deleteItem);
+
+
 
      return (
          <>
@@ -15,20 +28,24 @@ const ShoppingCartPage = ({Children}) => {
                  console.log(cart);
                  return ( 
                  <>
-                 <div className="shopping__items">
-                 <p>{cart.title}</p>
+                 <div className="shopping__items" key={data.id}>
+                 <p>{cart.title}</p>  
+                 <p>{cart.quantity}</p>
                  <p>{cart.price}</p>
-                 <button onSubmit={data => { window.localStorage.removeItem(data)}}  type="submit">Remove</button>
                  </div>
+
                  
                     </>
                     )
                 
                  
              })}
-            
+
+         </div>   
+         <div class="removed">
+          <button onClick={deleteItem} type="submit">Remove all</button>
          </div>
-         <button type="submit">Checkout</button>
+
          </>
      )
       

@@ -48,7 +48,7 @@ const Login =()  =>{
       // } else {
       //   console.log("You are not allowed")
       // }
-      // console.log(data);     
+       console.log(data);     
 
       const login = {
         "userId": data.login.userId,

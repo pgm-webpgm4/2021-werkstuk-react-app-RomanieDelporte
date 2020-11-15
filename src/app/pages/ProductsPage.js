@@ -7,7 +7,7 @@ const ShampooPage = ({children}) => {
     <>
     <div className="container">
         <div className="col-12">
-          <div>Products</div>
+          <h1>Alle producten</h1>
               <GetCategory/>
         </div>
     </div>

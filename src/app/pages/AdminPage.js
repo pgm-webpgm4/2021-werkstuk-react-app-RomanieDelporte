@@ -5,8 +5,8 @@ const AdminPage = ({children}) => {
   return (
       <div> 
         <div className="container">
-          <div>Registreer</div>
-          <Admin/>
+        <h1>Registreer je hier</h1>         
+        <Admin/>
           </div>
       </div>
    

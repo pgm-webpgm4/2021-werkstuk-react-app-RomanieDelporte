@@ -5,7 +5,7 @@ const CartPage = ({children}) => {
   return (
       <div> 
         <div className="container">
-          <div>ShoppingCart</div>
+          <h1>Winkelmandje</h1>
           <ShoppingCartPage/>
 </div>
       </div>

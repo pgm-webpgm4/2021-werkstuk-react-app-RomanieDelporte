@@ -20,7 +20,7 @@
 }
 
 
-.button_registers {
+.button_registers, .button__login {
     border: 2px solid $color-grey;
     padding: 0.4%;
     width: 12%;
@@ -29,7 +29,7 @@
 
     
 }
-.button_registers:hover {
+.button_registers:hover, .button__login:hover {
         background-color: $color-pink;
         color: $color-white;
         border: 2px solid  $color-pink;

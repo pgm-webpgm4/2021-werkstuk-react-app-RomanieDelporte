@@ -1,6 +1,7 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { useQuery, gql } from '@apollo/client';
 import { useParams } from 'react-router';
+
 
 
 import './ShampooList.scss';
@@ -12,6 +13,7 @@ import './ShampooList.scss';
                 description
                 price
                 image
+                quantity
                 categories {
                     id
                     title
@@ -28,19 +30,21 @@ const {loading, error, data } = useQuery(GET_DETAIL, {
     variables: { id },
 });
 
-
-useEffect(() => {
+ const handleOnclick = () => {
     if(data){
         const detail = {
             "title": data.product.title,
             "price": data.product.price,
+            "quantity": data.product.quantity,
           }
           let productDetail  = JSON.parse(localStorage.getItem('productInfo'))|| [];
           console.log(productDetail);
           productDetail.push(detail);
           localStorage.setItem('productInfo', JSON.stringify(productDetail)); 
     }
-},[data]);
+}
+    
+
 
 
 if (loading) return "Loading...";
@@ -59,8 +63,10 @@ if (error) return `Error! ${error.message}`;
                         <h1>{data.product.title}</h1>
                         <div className="detail__content">
                         <p>{data.product.description}</p>
+                        <p>{data.product.quantity}</p>
                         <p>{data.product.price}</p>
-                        <button id="add"  type="submit">Add to cart</button>
+
+                        <button onClick={handleOnclick}   type="submit">Add to cart</button>
                         </div>
                    </div>
                </div>
